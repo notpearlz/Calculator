@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div{
+    padding: 20px;
+}
+
+.border, .num, .op{
+    border: black solid 5px;
+    flex: 1;
+    margin: 5px;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    border: black solid 5px;
+    background-color: rgb(58, 50, 50);
+    width: 20vw;
+    padding: 0;
+}
+
+.screen{
+    display: flex;
+    background-color: rgb(209, 204, 204);
+    
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+
+    flex: 1;
+    background-color: rgba(133, 124, 124, 0.757);
+
+    
+}
+
+.numbers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    
+    width: 70%;
+}
+
+.row{
+    display: flex;
+    flex: 1, 1, auto;
+    justify-content: space-between;
+
+}
+
+
+
+.operators{
+    display: flex;
+    flex: 1, 1, auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 30%;
+
+}
+
+
+.num{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    background-color: rgb(182, 148, 79);
+    font-size: 20px;
+}
+
+.op{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+    background-color: rgba(205, 121, 42, 0.99);
+    font-size: 25px;
+}
