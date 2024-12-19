@@ -17,8 +17,10 @@ const inputs = [];
 // read the buttons clicked and puts it into screen
 nums.forEach(number => {
     number.addEventListener("click", (event)=>{
+        event.target.style.opacity = .3;
 
         if (canAddNumber()){
+            
             if(startNewNumber()){
                 if(event.target.textContent == "(-)"){
                     inputs.push("-");
@@ -40,13 +42,22 @@ nums.forEach(number => {
             updateScreen();
 
         }
+    });
+    number.addEventListener("mouseover", (event)=>{
+        event.target.style.opacity = .7;
 
+    });
+    number.addEventListener("mouseout", (event)=>{
+        event.target.style.opacity = 1;
 
     });
 });
 
 ops.forEach(op =>{
     op.addEventListener("click", (event)=>{
+        event.target.style.opacity = .3;
+
+
         if(event.target.id == "clear"){
             clearInputs();
         }
@@ -62,8 +73,19 @@ ops.forEach(op =>{
         lastInput = event.target.textContent
         updateScreen();
 
+    });
+
+    op.addEventListener("mouseover", (event)=>{
+        event.target.style.opacity = .7;
 
     });
+    op.addEventListener("mouseout", (event)=>{
+        event.target.style.opacity = 1;
+
+    });
+
+
+
 })
 
 
@@ -205,3 +227,5 @@ function addNewOperation(){
     }
     return false;
 }
+
+
